@@ -1,0 +1,185 @@
+/*=============== GOOGLE FONTS ===============*/
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(50deg, #d07cf7, #da3b3b);
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.container .card {
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row on desktop */
+    max-width: 350px;
+    min-width: 280px;
+    background: #ebf5fc;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container .card .box .content h2 {
+    font-size: 3.5em;
+    color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container .card .box .content h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container .card .box .content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p {
+    color: #000000;
+    transform: translateY(-10px);
+    
+}
+
+.container .card .box .content a {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.container .card:hover .box .content a {
+    background: #6a0303;
+}
+
+.box-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.box-content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.box-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .container .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    }
+
+    .box-content h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    }
+
+    .container .card .box .content h3 {
+        font-size: 1.3em;
+    }
+
+    .box-content h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .card {
+        flex: 1 1 100%; /* Full-width cards on mobile */
+        min-width: 90%; /* Ensures padding on smaller screens */
+    }
+
+    .container .card .box .content h2 {
+        font-size: 3em;
+    }
+
+    .container .card .box .content h3 {
+        font-size: 1.2em;
+        margin-bottom: 8px;
+    }
+
+    .container .card .box .content p {
+        font-size: 0.95em;
+        line-height: 1.4;
+    }
+
+    .container .card .box .content a {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .box-content h1 {
+        font-size: 1.3em;
+    }
+
+    .box-content p {
+        font-size: 0.9em;
+    }
+}
